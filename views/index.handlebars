@@ -1,4 +1,34 @@
-
-
-  <h1>{{title }}</h1>
-  <p>Welcome to {{title }}</p>
+<h1>Twither API</h1>
+<h2>Getting Tweets</h2>
+<p>GET https://twither.herokuapp.com/tweets</p>
+<p>Returns a list of tweets</p>
+<pre>
+  [
+    {
+      author: 'Sherlock Holmes',
+      content: 'When you have eliminated all which is impossible, then whatever remains, however improbable, must be the truth',
+      timestamp: '1462654666823'
+    },
+    {
+      author: 'John Watson',
+      content: 'Which is it today,’ I asked, ‘morphine or cocaine?',
+      timestamp: '1462654996720'
+    }
+  ]
+</pre>
+<hr>
+<h2>Publishing Tweets</h2>
+<p>POST https://twither.herokuapp.com/tweets</p>
+POST Body
+<pre>
+  {
+    author: String,
+    content: String
+  }
+</pre>
+<p>
+  Publishes a new tweet, if successful returns <pre>{success: true}</pre>
+</p>
+<p>
+  Otherwise, returns an error with code 400
+</p>
