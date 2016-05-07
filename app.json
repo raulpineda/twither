@@ -1,0 +1,16 @@
+{
+  "name": "twither",
+  "description": "Superduper ultra basic twitter clone for a weekend workshop",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
