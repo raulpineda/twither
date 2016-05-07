@@ -6,7 +6,7 @@ dbTweets = db.child('tweets');
 
 router.get('/', function(req, res) {
   var tweets;
-  dbTweets.orderByChild('timestamp').equalTo(100).on('value', function(snapshot) {
+  dbTweets.orderByChild('timestamp').on('value', function(snapshot) {
     tweets = snapshot.val();
   }, function(error) {
     console.log("The read failed: " + error.code);
