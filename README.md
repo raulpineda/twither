@@ -7,18 +7,18 @@ GET https://twither.herokuapp.com/tweets
 
 Returns a list of tweets
 ```
-[
-  {
+{
+  KHCQTDwKkWtws4d2JIU: {
     author: 'Sherlock Holmes',
     content: 'When you have eliminated all which is impossible, then whatever remains, however improbable, must be the truth',
     timestamp: '1462654666823'
   },
-  {
+  KHCRRE3KHSvmtSaaT79: {
     author: 'John Watson',
     content: 'Which is it today,’ I asked, ‘morphine or cocaine?',
     timestamp: '1462654996720'
   }
-]
+}
 ```
 -----------------------
 ## Publishing Tweets
@@ -33,4 +33,4 @@ POST Body
 ```
 Publishes a new tweet, if successful returns `{success: true}`
 
-Otherwise, returns an error with code 400
+Otherwise, returns `{error: 'message'}` with code 400
