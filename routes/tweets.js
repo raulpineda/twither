@@ -11,6 +11,7 @@ router.get('/', function(req, res) {
   }, function(error) {
     console.log("The read failed: " + error.code);
   });
+  res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify(tweets));
 });
 
@@ -21,9 +22,11 @@ router.post('/', function(req, res) {
       author: req.body.author,
       content: req.body.content
     });
+    res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify({success: true}));
   } else {
-    res.status(400).send('Author and content are required');
+    res.setHeader('Content-Type', 'application/json');
+    res.status(400).send({error: 'Author and content are required'});
   }
 });
 
