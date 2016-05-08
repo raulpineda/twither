@@ -16,6 +16,20 @@
     }
   }
 </pre>
+<h2>Getting a Tweet</h2>
+<p>
+  GET https://twither.herokuapp.com/tweets/:id
+</p>
+<p>
+  Returns a tweet if found
+</p>
+<pre>
+  {
+    author: 'Sherlock Holmes',
+    content: 'When you have eliminated all which is impossible, then whatever remains, however improbable, must be the truth',
+    timestamp: '1462654666823'
+  }
+</pre>
 <hr>
 <h2>Publishing Tweets</h2>
 <p>POST https://twither.herokuapp.com/tweets</p>

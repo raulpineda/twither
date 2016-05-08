@@ -20,6 +20,18 @@ Returns a list of tweets
   }
 }
 ```
+
+## Getting a Tweet
+GET https://twither.herokuapp.com/tweets/:id
+
+Returns a tweet if found
+```
+{
+  author: 'Sherlock Holmes',
+  content: 'When you have eliminated all which is impossible, then whatever remains, however improbable, must be the truth',
+  timestamp: '1462654666823'
+}
+```
 -----------------------
 ## Publishing Tweets
 POST https://twither.herokuapp.com/tweets
