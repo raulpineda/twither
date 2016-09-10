@@ -20,7 +20,8 @@ router.post('/', function(req, res) {
     dbTweets.push({
       timestamp: Date.now(),
       author: req.body.author,
-      content: req.body.content
+      content: req.body.content,
+      sentiment: req.body.sentiment || null
     });
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify({success: true}));
